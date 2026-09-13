@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludoteca | Catálogo</title>
+  <link rel="stylesheet" href="estilosIA.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="marca"><span class="icono">🎲</span> Ludoteca</div>
+    <nav>
+      <ul class="nav-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html" class="activo">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="sitio.html">Quién mantiene el sitio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="introduccion">
+      <h1>Catálogo completo</h1>
+      <p>Todos los juegos disponibles en la ludoteca, organizados por categoría.</p>
+    </section>
+
+    <section class="bloque-categoria" id="cat-estrategia">
+      <h2>Estrategia</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/ajedrez.png" alt="Portada del juego Ajedrez" />
+          <div class="info">
+            <h3>Ajedrez</h3>
+            <p class="meta">2 jugadores · 20–60 min</p>
+            <p class="resena">Duelo de estrategia pura sobre 64 casillas, sin azar.</p>
+            <a class="enlace-reglamento" href="reglamentos/ajedrez.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/catan.png" alt="Portada del juego Catan" />
+          <div class="info">
+            <h3>Catan</h3>
+            <p class="meta">3–4 jugadores · 60–90 min</p>
+            <p class="resena">Construcción, comercio y gestión de recursos en un mapa variable.</p>
+            <a class="enlace-reglamento" href="reglamentos/catan.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="bloque-categoria" id="cat-cartas">
+      <h2>Cartas</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/truco.png" alt="Portada del juego Truco" />
+          <div class="info">
+            <h3>Truco</h3>
+            <p class="meta">2–6 jugadores · 20–40 min</p>
+            <p class="resena">Picardía y faroles con mazo español, ideal para grupos.</p>
+            <a class="enlace-reglamento" href="reglamentos/truco.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/poker.png" alt="Portada del juego Póker" />
+          <div class="info">
+            <h3>Póker</h3>
+            <p class="meta">2–8 jugadores · 30–90 min</p>
+            <p class="resena">Estrategia y psicología con mazo francés.</p>
+            <a class="enlace-reglamento" href="reglamentos/poker.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="bloque-categoria" id="cat-familiares">
+      <h2>Familiares</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/uno.png" alt="Portada del juego Uno" />
+          <div class="info">
+            <h3>Uno</h3>
+            <p class="meta">2–10 jugadores · 15–30 min</p>
+            <p class="resena">Rápido y colorido, apto para toda la familia.</p>
+            <a class="enlace-reglamento" href="reglamentos/uno.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/jenga.png" alt="Portada del juego Jenga" />
+          <div class="info">
+            <h3>Jenga</h3>
+            <p class="meta">1 o más jugadores · 15–30 min</p>
+            <p class="resena">Pulso y tensión creciente con una torre de madera.</p>
+            <a class="enlace-reglamento" href="reglamentos/jenga.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    Ludoteca — sitio estático de reseñas de juegos de mesa.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludoteca | Inicio</title>
+  <link rel="stylesheet" href="estilosIA.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="marca"><span class="icono">🎲</span> Ludoteca</div>
+    <nav>
+      <ul class="nav-principal">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="sitio.html">Quién mantiene el sitio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="introduccion">
+      <h1>Bienvenidos a la Ludoteca</h1>
+      <p>
+        Reseñamos juegos de mesa de estrategia, cartas y familiares para que encuentres
+        tu próximo juego favorito. Elegí una categoría para ver las reseñas.
+      </p>
+    </section>
+
+    <nav class="selector-categorias" aria-label="Selector de categorías">
+      <a href="#estrategia">Estrategia</a>
+      <a href="#cartas">Cartas</a>
+      <a href="#familiares">Familiares</a>
+    </nav>
+
+    <!-- Los siguientes paneles se muestran de forma estática con CSS (:target),
+         sin utilizar ningún script -->
+
+    <section id="estrategia" class="panel-categoria">
+      <h2>Estrategia</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/ajedrez.png" alt="Portada del juego Ajedrez" />
+          <div class="info">
+            <h3>Ajedrez</h3>
+            <p class="meta">2 jugadores · 20–60 min</p>
+            <p class="resena">
+              El clásico juego de estrategia pura. Cada partida es un desafío distinto
+              gracias a la enorme cantidad de combinaciones posibles.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/ajedrez.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/catan.png" alt="Portada del juego Catan" />
+          <div class="info">
+            <h3>Catan</h3>
+            <p class="meta">3–4 jugadores · 60–90 min</p>
+            <p class="resena">
+              Gestión de recursos, comercio y construcción en un tablero que cambia
+              en cada partida. Ideal para grupos que buscan un desafío más largo.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/catan.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="cartas" class="panel-categoria">
+      <h2>Cartas</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/truco.png" alt="Portada del juego Truco" />
+          <div class="info">
+            <h3>Truco</h3>
+            <p class="meta">2–6 jugadores · 20–40 min</p>
+            <p class="resena">
+              El juego de cartas más popular de las reuniones argentinas: picardía,
+              faroles y mucha algarabía con el mazo español.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/truco.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/poker.png" alt="Portada del juego Póker" />
+          <div class="info">
+            <h3>Póker</h3>
+            <p class="meta">2–8 jugadores · 30–90 min</p>
+            <p class="resena">
+              Un clásico de estrategia y psicología con mazo francés. Perfecto para
+              noches de juego largas entre amigos.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/poker.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="familiares" class="panel-categoria">
+      <h2>Familiares</h2>
+      <div class="grilla-juegos">
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/uno.png" alt="Portada del juego Uno" />
+          <div class="info">
+            <h3>Uno</h3>
+            <p class="meta">2–10 jugadores · 15–30 min</p>
+            <p class="resena">
+              Rápido, colorido y fácil de aprender. Un imprescindible para jugar
+              en familia desde los más chicos hasta los más grandes.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/uno.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego">
+          <img src="imagenes/jenga.png" alt="Portada del juego Jenga" />
+          <div class="info">
+            <h3>Jenga</h3>
+            <p class="meta">1 o más jugadores · 15–30 min</p>
+            <p class="resena">
+              Pulso y estrategia en torno a una torre de madera. La tensión crece
+              en cada turno hasta el derrumbe final.
+            </p>
+            <a class="enlace-reglamento" href="reglamentos/jenga.pdf">Reglamento (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <p class="mensaje-vacio">
+      Elegí una categoría arriba (Estrategia, Cartas o Familiares) para ver las reseñas de los juegos.
+    </p>
+  </main>
+
+  <footer class="pie-pagina">
+    Ludoteca — sitio estático de reseñas de juegos de mesa.
+  </footer>
+
+</body>
+</html>

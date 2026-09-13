@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludoteca | Contacto</title>
+  <link rel="stylesheet" href="estilosIA.css" />
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="marca"><span class="icono">🎲</span> Ludoteca</div>
+    <nav>
+      <ul class="nav-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+        <li><a href="sitio.html">Quién mantiene el sitio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="introduccion">
+      <h1>Contacto</h1>
+      <p>¿Tenés dudas, sugerencias o querés proponer un juego? Escribinos.</p>
+    </section>
+
+    <!-- Formulario simple, sin scripts (sitio estático) -->
+    <form class="formulario-contacto" action="#" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje aquí..." required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="datos-contacto">
+      <div class="item">
+        <h3>Correo</h3>
+        <p>contacto@ludoteca.example</p>
+      </div>
+      <div class="item">
+        <h3>Teléfono</h3>
+        <p>+54 221 555-0100</p>
+      </div>
+      <div class="item">
+        <h3>Horario de atención</h3>
+        <p>Lunes a sábados de 15 a 20 hs.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    Ludoteca — sitio estático de reseñas de juegos de mesa.
+  </footer>
+
+</body>
+</html>

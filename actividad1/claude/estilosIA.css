@@ -1,0 +1,368 @@
+/* ===== Ludoteca - estilosIA.css ===== */
+
+:root {
+  --color-fondo: #f6f1e7;
+  --color-superficie: #ffffff;
+  --color-primario: #7a3b2e;
+  --color-primario-oscuro: #5c2b21;
+  --color-secundario: #2f6b4f;
+  --color-acento: #d9a441;
+  --color-texto: #2b2420;
+  --color-texto-claro: #6b6259;
+  --color-borde: #e3d9c6;
+  --radio: 10px;
+  --sombra: 0 4px 14px rgba(43, 36, 32, 0.12);
+  --fuente: "Segoe UI", Verdana, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+
+.encabezado {
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: 1.2rem 1.5rem 0.4rem;
+}
+
+.encabezado .marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.encabezado .marca .icono {
+  font-size: 1.8rem;
+}
+
+.nav-principal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.9rem 0;
+}
+
+.nav-principal a {
+  color: #f6ead9;
+  font-weight: 600;
+  padding: 0.3rem 0.2rem;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-principal a:hover,
+.nav-principal a.activo {
+  color: #fff;
+  border-bottom-color: var(--color-acento);
+  text-decoration: none;
+}
+
+/* ---------- Contenedor general ---------- */
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.introduccion {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+.introduccion h1 {
+  color: var(--color-primario-oscuro);
+  margin-bottom: 0.4rem;
+}
+
+.introduccion p {
+  color: var(--color-texto-claro);
+}
+
+/* ---------- Selector de categorías (home) ---------- */
+
+.selector-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.selector-categorias a {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  color: var(--color-primario-oscuro);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.selector-categorias a:hover {
+  text-decoration: none;
+  background-color: var(--color-acento);
+  color: #3a2a10;
+  transform: translateY(-2px);
+}
+
+/* Panel estático por categoría, controlado sin scripts con :target */
+
+.panel-categoria {
+  display: none;
+  border-top: 4px solid var(--color-secundario);
+  padding-top: 1.2rem;
+}
+
+.panel-categoria:target {
+  display: block;
+}
+
+.panel-categoria h2 {
+  color: var(--color-secundario);
+  text-transform: capitalize;
+}
+
+.mensaje-vacio {
+  display: block;
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.6rem;
+  color: var(--color-texto-claro);
+  text-align: center;
+}
+
+#estrategia:target ~ .mensaje-vacio,
+#cartas:target ~ .mensaje-vacio,
+#familiares:target ~ .mensaje-vacio {
+  display: none;
+}
+
+/* ---------- Grilla de juegos / reseñas ---------- */
+
+.grilla-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-juego {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-juego img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.tarjeta-juego .info {
+  padding: 1rem 1.1rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-juego h3 {
+  margin: 0 0 0.3rem;
+  color: var(--color-primario-oscuro);
+}
+
+.tarjeta-juego .meta {
+  font-size: 0.85rem;
+  color: var(--color-texto-claro);
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta-juego .resena {
+  flex: 1;
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+}
+
+.tarjeta-juego .enlace-reglamento {
+  align-self: flex-start;
+  font-weight: 700;
+  color: var(--color-secundario);
+}
+
+/* ---------- Catálogo (todas las categorías juntas) ---------- */
+
+.bloque-categoria {
+  margin-bottom: 2.6rem;
+}
+
+.bloque-categoria h2 {
+  color: var(--color-primario-oscuro);
+  border-bottom: 3px solid var(--color-acento);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+/* ---------- Formulario de contacto ---------- */
+
+.formulario-contacto {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.8rem;
+  max-width: 520px;
+}
+
+.formulario-contacto label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.3rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.formulario-contacto button {
+  margin-top: 1.4rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+.datos-contacto {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.datos-contacto .item {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--sombra);
+}
+
+.datos-contacto .item h3 {
+  margin: 0 0 0.3rem;
+  color: var(--color-secundario);
+}
+
+/* ---------- Página "quién mantiene el sitio" ---------- */
+
+.perfil-responsable {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.perfil-responsable .avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--color-acento);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.lista-simple {
+  padding-left: 1.2rem;
+}
+
+.lista-simple li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie-pagina {
+  text-align: center;
+  padding: 1.4rem;
+  color: var(--color-texto-claro);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 640px) {
+  .encabezado .marca {
+    font-size: 1.25rem;
+  }
+
+  .nav-principal {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .contenedor {
+    padding: 1.4rem 1rem 2rem;
+  }
+
+  .perfil-responsable {
+    flex-direction: column;
+    text-align: center;
+  }
+}
